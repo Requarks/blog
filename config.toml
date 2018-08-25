@@ -1,0 +1,56 @@
+baseurl         = "https://blog.requarks.io/"
+theme           = "casper-two"
+languageCode    = "en-US"
+disqusShortname = "requarks"
+paginate        = 6
+canonifyurls    = true
+#SectionPagesMenu = "main"
+title       = "Requarks Blog"
+
+[params]
+  title       = "Requarks Blog"
+  subtitle    = "Updates from the Requarks team"
+
+  cover       = "images/site-bg.jpg"
+  description = "Updates from the Requarks team"
+  metaDescription = "Updates from the Requarks team"
+  googleAnalytics = "UA-9094100-3"
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "requarks"
+  githubName = "requarks"
+
+  logo = "https://blog.requarks.io/content/images/2018/06/mono_transp-1.png"
+  orgName = "requarks.io"
+  orgWebsite = "https://requarks.io"
+  orgDescription = "Here is a description placeholder for your org"
+
+  author = "Nicolas Giard"
+  authorAvatar = "https://avatars1.githubusercontent.com/u/15522395?s=100&v=4"
+  authorLocation = "Montreal, Canada"
+  authorWebsite = "https://github.com/NGPixel"
+  authorDescription = "Lead Developer"
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[permalinks]
+  post = "/:slug/"
+
+[[menu.main]]
+  name = "Blog Home"
+  url = "/"
+  weight = 200
+
+[[menu.main]]
+  name = "Requarks.io"
+  url = "https://requarks.io/"
+  weight = 100
+
+[[menu.main]]
+  name = "Wiki.js"
+  url = "https://wiki.js.org/"
+  weight = 95
