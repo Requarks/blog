@@ -27,6 +27,7 @@ More technical users can now use a code-based editor while the average joe may p
 ## Authentication
 ### Modular + extensible
 Wiki.js comes with a long list of authentication providers built-in and some new ones have been added:
+
  - Auth0
  - Azure Active Directory
  - Discord
@@ -54,6 +55,7 @@ It's very simple to add providers thanks to the new modular system.
 In 1.x, Git was a requirement and the only option to store and backup your content. This is no longer the case in 2.0. Git is now **optional** and you can use virtually any storage target available.
 
 In addition to git, you'll be able to sync your content to cloud services, network storage and more:
+
 - Amazon S3
 - Azure Blob Storage
 - DigitalOcean Spaces
