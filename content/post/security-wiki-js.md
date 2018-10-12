@@ -38,7 +38,43 @@ The token contains only the bare minimum data about the user, so that the majori
 
 ## Permissions
 
-*TODO*
+In order to address the limited role-based system of 1.x, the new 2.0 will use a permission-based system. Combined with GraphQL, this allows us to restrict access to resources in a very granular way. For the exact same resource, we can restrict access of specific properties to a specific permission. Let's query the list of authentication strategies for example:
+
+```
+query {
+  authentication {
+    strategies {
+      title
+      icon
+      color
+    }
+  }
+}
+```
+In the above query, we request the *title*, *icon* and *color* fields. These fields are public and don't require any special permission. The query will be executed without any issues, even with no token.
+
+However, let's add an additional field `config`:
+
+```
+query {
+  authentication {
+    strategies {
+      title
+      icon
+      color
+      config {
+        key
+        value
+      }
+    }
+  }
+}
+```
+Sending this query with no token or with a standard user token would fail, because the `config` field requires a specific permission to be present in the token. The permission required is specified as part of the GraphQL schema:
+```
+config: [KeyValuePair] @auth(requires: ["manage:system"])
+```
+The query will only succeed if the token contains the permission `manage:system`. As you can see, this allows for granular restrictions, even within the same query. It all depends on specific fields and their required permissions. You'll be able to generate API keys that have access to only a subset of resources very easily.
 
 ## Handling expiration and revocation
 
