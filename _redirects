@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://requarks-blog.netlify.com/* http://blog.requarks.io/:splat 301!
