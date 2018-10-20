@@ -78,17 +78,17 @@ The query will only succeed if the token contains the permission `manage:system`
 
 ## Handling expiration and revocation
 
-This brings us to expiration and revocation issues. If a token is always good if the signature is valid, how do we revoke a user access? What if a token used by an API has been comprised and must be revoked? The token signature is valid so it could technically still be used, right? **Not exactly.**
+This brings us to expiration and revocation issues. If a token is always good if the signature is valid, how do we revoke a user access? What if a token used by an API has been compromised and must be revoked? The token signature is valid so it could technically still be used, right? **Not exactly.**
 
 All tokens contain an expiration date. By default, Wiki.js issues tokens valid for 30 minutes. Again, we can trust the expiration date specified in the token if the signature matches. That being said, we don't want the user to re-login every 30 minutes. Therefore, if the token is **expired but still has a valid signature**, the system will query the database and generate a new token, valid for another 30 mins. It's at this moment that access can be revoked. If the user has been blocked, a new token will not be issued and the user will be logged out. So even though his token is still valid, because of the short expiration check, it will not be renewed.
 
-In summary, a user can use a token within 30 minutes without any check. However, once the 30 minutes have passed, the token will need to be renewed to keep using the system. A token can be renewed within 14 days. This means you can use Wiki.js on Monday, return back on Friday and still be logged in. His old token will have been used to generate a brand new token, valid for 30 minutes and renewable for 14 days.
+In summary, a user can use a token within 30 minutes without any check. However, once the 30 minutes have passed, the token will need to be renewed to keep using the system. A token can be renewed within 14 days. This means you can use Wiki.js on Monday, return back on Friday and still be logged in. Your old token will have been used to generate a brand new token, valid for 30 minutes and renewable for 14 days.
 
 ## APIs and non-cookie requests
 
-While the user JWT is stored in a cookie, the system doesn't mandate all requests to use the cookies header to send the token, as it was the case with Wiki.js 1.x. The token can now be sent directly in the *Authentication* header, which is the standard way to authenticate requests by APIs.
+While the user JWT is stored in a cookie, the system doesn't mandate all requests to use the cookies header to send the token, as it was the case with Wiki.js 1.x. The token can now be sent directly in the *Authentication* header, which is the standard way to authenticate requests from APIs.
 
-Also, because the expiration of the token is decided by the system and is part of this very token, we can issue tokens with much longer expiration date for use in APIs. This means you'll be able to issue tokens valid for a year in order to interact with your Wiki.js installation APIs by your other systems. Because we need to be able to revoke these tokens as well, each API key will have its own signature key. We can therefore immediately revoke a key by removing its corresponding signature key. The token will no longer be valid because of this change, preventing the API from making further requests.
+Also, because the expiration of the token is decided by the system and is part of the token itself, we can issue tokens with much longer expiration date for use in APIs. This means you'll be able to issue tokens valid for a year in order to interact with your Wiki.js installation APIs by your other systems. Because we need to be able to revoke these tokens as well, each API key will have its own signature key. We can therefore immediately revoke a key by removing its corresponding signature key. The token will no longer be valid because of this change, preventing the API from making further requests.
 
 ## Conclusion
 
