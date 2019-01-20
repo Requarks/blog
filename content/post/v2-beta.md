@@ -28,4 +28,57 @@ This all changes with 2.0.
 
 ### Groups
 
+Groups are a new addition to Wiki.js. Permissions are no longer tied to users. Instead, users are linked to one or more groups. Groups have global permissions and page rules.
+
+Global permissions lets you define whether a group can read pages, post a comment, upload assets, etc. They are applied at the global level.
+
+Page Rules are the second level of permissions. They apply specific permissions to a specific page or section. For example, you might not want to give read access to the whole site but only on the homepage and any pages under `/foo-bar`. This is possible using Page Rules.
+
+### Modules
+
+Wiki.js v2.0 is fully modular. You have total control on which feature you want for your wiki. Your wiki can use Google authentication, a WikiText editor and have its content stored in AWS S3. Modules are splitted into 6 categories:
+
+#### Authentication
+
+The first version of Wiki.js had pretty good support for a vast array of authentication providers. In 2.0, we added even more:
+
+- Auth0
+- Azure AD
+- CAS
+- Discord
+- Dropbox
+- Facebook
+- GitHub
+- Google
+- LDAP
+- Local (default)
+- Microsoft
+- Generic OAuth2
+- Generic OpenID Connect
+- Okta
+- SAML 2.0
+- Slack
+- Twitch
+
+One of the most requested feature for v1 was for users to be able to create their own account. This is now possible! You can also restrict by email domains and automatically enroll new users into a specific group.
+
+#### Editors
+
+You are no longer limited to Markdown. You can now choose between a selection of 6 editors when creating a new page:
+
+- **API Docs**: For REST / GraphQL documentation
+- **Code**: Raw HTML
+- **Markdown**: Default Markdown editor
+- **Tabular**: For Grid/Excel-like pages
+- **Visual Builder**: WYSIWYG-style editor, with drag-n-drop functionnality.
+- **WikiText**: For writing MediaWiki-style content
+
+The default Markdown editor now comes with a live preview panel.
+
+*Only the Code and Markdown editors are available for now. The rest will come later on.*
+
+#### Logging
+
+Logs are no longer limited to the console or some hard to access log files.
+
 *Being developed...*
