@@ -79,6 +79,40 @@ The default Markdown editor now comes with a live preview panel.
 
 #### Logging
 
-Logs are no longer limited to the console or some hard to access log files.
+This one is more for administrators and developers. Logs are no longer limited to the console or some hard to access log files. You can now forward logs to an external service. The following targets will be supported:
+
+- Airbrake
+- Bugsnag
+- Local Disk
+- Event Log *(Windows)*
+- Loggly
+- Logstash
+- NewRelic
+- Papertrail
+- Raygun
+- Rollbar
+- Sentry
+- Syslog *(Linux)*
+
+You'll also be able to live stream the logs from the administration area in your browser.
+
+#### Rendering
+
+The complete rendering pipeline is now fully exposed and customizable. You can now choose how content is rendered. A detailed article covering content rendering will be published at a later date.
+
+#### Search Engines
+
+The search capabilities were greatly improved in v2. Search will now work with non-latin languages and be much more efficient. The following engines will be supported:
+
+- Algolia
+- AWS CloudSearch
+- Azure Search
+- Internal DB (default)
+- Elasticsearch
+- Manticore
+- Solr
+- Sphinx
+
+#### Storage
 
 *Being developed...*
