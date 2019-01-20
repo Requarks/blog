@@ -183,4 +183,16 @@ There are many features that are not listed there, most of which are simply not 
 - Ratings
 - Profile
 
-*Being developed...*
+## Installing the beta
+
+Instructions to install the beta can be found on the [beta wiki](https://docs-beta.requarks.io/).
+
+It's highly recommended to use the Docker image, which allows for extremely fast upgrades between beta builds.
+
+## Reporting bugs
+
+While bug reports are to be expected, **DO NOT** report features that are missing, buttons not doing anything or anything which is clearly not finished. However, if you get an error for something that usually works, or setup/boot time errors, please [report them](https://github.com/Requarks/wiki/issues).
+
+## Stay tuned
+
+The best way to be kept in the loop for new releases and feature updates, is to [follow us on Twitter](https://twitter.com/requarks).
