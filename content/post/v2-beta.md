@@ -115,4 +115,39 @@ The search capabilities were greatly improved in v2. Search will now work with n
 
 #### Storage
 
+You are no longer required to use git for storing content. All content is now stored directly in the database. You can still continue to have your pages synced with a git repository should you want to or use one of the many new storage targets:
+
+- Azure Blob Storage
+- Box
+- DigitalOcean Spaces
+- Local Disk / Network Share
+- Dropbox
+- Google Drive
+- Git
+- OneDrive
+- S3 (AWS)
+- SCP (SSH)
+
+You can also choose the sync direction (push, pull or sync) for most targets.
+
+### Locales
+
+There're some great new features when it comes to localization. Translation strings are now kept up-to-date every day, which means you'll always get the latest additions / corrections as they are added by translators. New locales can now be downloaded from the administration area as needed. They are no longer bundled with the app itself.
+
+Another most requested feature was the ability to have multilingual content. This is now possible in 2.0. You can now have content in multiple languages, with the use of locale prefixes. For example, `/en/foo-bar` and `/fr/foo-bar` will now display their content and UI in English and French respectively.
+
+### Navigation
+
+The table of contents has been moved to the right of the page. The left sidebar is now a global navigation, which is fully customizable from the administration area.
+
+All pages (with the exception of the homepage) have a breadcrumb navigation as well. It's now easier than ever to go up a level and quickly understand the page hierarchy.
+
+### Themes
+
+While you could change the colors of the UI in v1, it was fairly limited. In v2, we introduce themes. You can have total control on how the page is displayed. You can make your wiki look completely different from the default visual if you choose to.
+
+#### Dark Mode
+
+An optional, system-wide Dark Mode. Enough said!
+
 *Being developed...*
