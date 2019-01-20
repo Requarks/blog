@@ -26,7 +26,7 @@ One of the biggest lesson learned from v1 was how users want to customize their 
 
 This all changes with 2.0.
 
-### Groups
+#### Groups
 
 Groups are a new addition to Wiki.js. Permissions are no longer tied to users. Instead, users are linked to one or more groups. Groups have global permissions and page rules.
 
