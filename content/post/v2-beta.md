@@ -18,6 +18,12 @@ THIS IS A **BETA** RELEASE. It is not production-ready and is missing many criti
 
 That being said, you'll be able to easily upgrade between beta releases, up to the final release.
 
+**Note that it is not yet possible to import content from v1.x.** This feature will be available in the final release.
+
+## tl;dr
+
+Instructions to install the beta can be found on the [beta wiki](https://docs-beta.requarks.io/), which obviously runs the new beta!
+
 ## What's New in 2.0?
 
 This new version is a complete rewrite from the ground up. It's fully modular, more powerful and customizable than ever.
@@ -26,7 +32,7 @@ One of the biggest lesson learned from v1 was how users want to customize their 
 
 This all changes with 2.0.
 
-#### Groups
+### Groups
 
 Groups are a new addition to Wiki.js. Permissions are no longer tied to users. Instead, users are linked to one or more groups. Groups have global permissions and page rules.
 
@@ -61,6 +67,8 @@ The first version of Wiki.js had pretty good support for a vast array of authent
 - Twitch
 
 One of the most requested feature for v1 was for users to be able to create their own account. This is now possible! You can also restrict by email domains and automatically enroll new users into a specific group.
+
+Two-Factor Authentication (2FA) is also coming soon.
 
 #### Editors
 
@@ -142,6 +150,10 @@ The table of contents has been moved to the right of the page. The left sidebar 
 
 All pages (with the exception of the homepage) have a breadcrumb navigation as well. It's now easier than ever to go up a level and quickly understand the page hierarchy.
 
+### Tags
+
+Tags are a new addition to Wiki.js. You can now categorize your pages and quickly find pages with the same or related tags!
+
 ### Themes
 
 While you could change the colors of the UI in v1, it was fairly limited. In v2, we introduce themes. You can have total control on how the page is displayed. You can make your wiki look completely different from the default visual if you choose to.
@@ -149,5 +161,26 @@ While you could change the colors of the UI in v1, it was fairly limited. In v2,
 #### Dark Mode
 
 An optional, system-wide Dark Mode. Enough said!
+
+### History
+
+All content changes are now tracked and be viewed / restored from the new history page.
+
+### GraphQL API
+
+The frontend has been completely decoupled, thanks to a new GraphQL API. It's now easier than ever to build custom integrations with your other tools. A detailed article on this API will be published at a later date.
+
+### Mobile / Tablet compatibility
+
+Your wiki pages will now look nice on all devices, no matter their screen size! (*Although the administration area requires a normal screen for now!*)
+
+## And so much more...
+
+There are many features that are not listed there, most of which are simply not developed yet. They will be detailed as they are ready. A few examples include:
+
+- Personal wiki
+- Comments
+- Ratings
+- Profile
 
 *Being developed...*
