@@ -3,7 +3,7 @@ categories:
 - Updates
 date: "2019-02-20"
 description: What's new in Wiki.js v2 BETA Build 42...
-image: images/unsplash-spikes.jpg
+image: images/unsplash-shipwood.jpg
 slug: v2-beta-42
 tags:
 - updates
