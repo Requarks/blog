@@ -26,7 +26,7 @@ Check out the [docs](https://docs-beta.requarks.io/search) for the setup instruc
 ![](/images/wikijs-searchresults.png)
 
 ### SQLite Support
-SQLite is now supported and will no longer throw an error during setup. This brings to 5 the number of supported MySQL database engines!
+SQLite is now supported and will no longer throw an error during setup. This brings to 5 the number of supported database engines!
 
 ### Git Change Processing
 Any changes made in the remote git repository will now be picked up and reflected in the wiki. Note that any pages created before enabling Git will not be pushed to the remote repository. This will be addressed in an upcoming release. In the meantime, simply saving the page again fixes this issue.
