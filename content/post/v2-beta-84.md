@@ -21,8 +21,6 @@ This release includes 2 new search engines:
 
 Check out the [docs](https://docs-beta.requarks.io/search) for the setup instructions.
 
-![](/images/wikijs-searchresults.png)
-
 ### Bug fixes / Minor improvements
 - Fixed error when saving navigation in admin area
 - Fixed guest search failing because of missing global permissions
