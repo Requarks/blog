@@ -1,4 +1,9 @@
 # Redirect default Netlify subdomain to primary domain
 http://requarks-blog.netlify.com/* https://blog.requarks.io/:splat 301!
 
-/v2-beta* https://docs-beta.requarks.io/releases 301!
+/v2-beta-115 https://docs-beta.requarks.io/releases#200-beta115 301!
+/v2-beta-91 https://docs-beta.requarks.io/releases#200-beta91 301!
+/v2-beta-84 https://docs-beta.requarks.io/releases#200-beta84 301!
+/v2-beta-68 https://docs-beta.requarks.io/releases#200-beta68 301!
+/v2-beta-42 https://docs-beta.requarks.io/releases#200-beta42 301!
+/v2-beta https://docs-beta.requarks.io/releases 301!
